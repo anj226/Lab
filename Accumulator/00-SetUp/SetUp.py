@@ -17,6 +17,6 @@ class RSA_Accumulator:
         Generate a generator g in Z_N^*.
         '''
         g = randrange(1,self.N)
-        while (GCD(g, self.N) != 1 and g != 1):
+        while (GCD(g, self.N) != 1 or g == 1):
             g = randrange(1,self.N)        
         self.g = g
